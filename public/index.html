@@ -6,20 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 <body>
-    <h1>OLA teste</h1>
+    <div class="cabecalho">
+        <h1>Calendario Page</h1>
+    </div>
+
+
     <script src="/socket.io/socket.io.js"></script>
     <script>
         var socket = io();
-        socket.on("conexao", (arg1) => {
+        socket.on("connection", (arg1) => {
             if (arg1) {
-                window.location.reload() 
+                window.location.reload()
             }
         });    
     </script>
 
 </body>
- 
+
 </html>

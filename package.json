@@ -4,9 +4,11 @@
   "description": "Create to do list using html, css and javascript",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "npm run watch",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "nodemon --watch public/index.html"
+    "watch": "nodemon --watch inde.js",
+    "scss": "sass --watch public/scss/styles.scss:public/styles.css",
+    "sass:compile": "node-sass --include-path sass public/scss/styles.scss public/styles.css"
   },
   "repository": {
     "type": "git",
@@ -20,5 +22,8 @@
   "homepage": "https://github.com/marcellevargas/todo-list#readme",
   "dependencies": {
     "socket.io": "^4.5.1"
+  },
+  "devDependencies": {
+    "node-sass": "^7.0.1"
   }
 }
